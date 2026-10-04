@@ -1680,14 +1680,14 @@ const translations = {
     portfolioHead: { tag: "Галерея", title: "Примеры наших работ", sub: "Свадебные таросики, подарочные боксы и праздничные декорации для наших заказчиков." },
     cats: ["Все", "Таросики", "Декорация", "Букеты", "Подарки", "Сладости"],
     works: [
-      { title: "Свадебная декорация и арка", cat: "Декорация", img: "s1" },
-      { title: "Свадебные таросики ручной работы", cat: "Таросики", img: "s2" },
-      { title: "Подарочный бокс с живыми цветами", cat: "Подарки", img: "s3" },
-      { title: "Авторский букет невесты", cat: "Букеты", img: "s4" },
-      { title: "Кэнди-бар и праздничные десерты", cat: "Сладости", img: "s5" },
-      { title: "Фотозона на день рождения", cat: "Декорация", img: "p6" },
-      { title: "Сувениры для гостей ручной работы", cat: "Подарки", img: "s6" },
-      { title: "Оформление президиума и зала", cat: "Декорация", img: "hero" }
+      { title: "Свадебная декорация и арка", catIndex: 2, img: "s1" },
+      { title: "Свадебные таросики ручной работы", catIndex: 1, img: "s2" },
+      { title: "Подарочный бокс с живыми цветами", catIndex: 4, img: "s3" },
+      { title: "Авторский букет невесты", catIndex: 3, img: "s4" },
+      { title: "Кэнди-бар и праздничные десерты", catIndex: 5, img: "s5" },
+      { title: "Фотозона на день рождения", catIndex: 2, img: "p6" },
+      { title: "Сувениры для гостей ручной работы", catIndex: 4, img: "s6" },
+      { title: "Оформление президиума и зала", catIndex: 2, img: "hero" }
     ],
     reviewsHead: { tag: "Отзывы", title: "Впечатления клиентов", sub: "Искренние слова тех, кто доверил нам оформление своего праздника." },
     reviews: [
@@ -1760,12 +1760,12 @@ const translations = {
     },
     servicesHead: { tag: "Տեսականի", title: "Մեր ծառայությունները", sub: "Ամեն ինչ տոնի կատարյալ ձևավորման համար՝ հյուրերի տարոսիկներից մինչև սրահների դեկոր:" },
     services: [
-      { id: "tarosik", title: "Տարոսիկներ", desc: "Հարսանեկան և կնունքի տարոսիկներ՝ նուրբ ձեռագործ աշխատանք ձեր տոնի ոճով:", img: "s2", cat: "Տարոսիկներ", hint: "Ձեռքի աշխատանք" },
-      { id: "decor", title: "Տոնական դեկորացիա", desc: "Հարսանյաց դեկոր, ֆոտոզոնաներ կնունքների և ծնունդների համար, հարսանեկան կամարներ:", img: "s1", cat: "Դեկորացիա", hint: "Անհատական նախագիծ" },
-      { id: "boxes", title: "Նվեր-տուփեր", desc: "Նրբաճաշակ նվերների հավաքածուներ քաղցրավենիքով, ծաղիկներով և բացիկներով:", img: "s3", cat: "Նվերներ", hint: "Մտերիմների համար" },
-      { id: "bouquets", title: "Հեղինակային ծաղկեփնջեր", desc: "Հարսանեկան և տոնական ծաղկեփնջեր՝ ընտրված թարմ ծաղիկներով:", img: "s4", cat: "Ծաղիկներ", hint: "Միշտ թարմ ծաղիկներ" },
-      { id: "sweets", title: "Քաղցրավենիք և Քենդի-բար", desc: "Տոնական թխվածքներ, մակարոնսներ և քաղցր սեղանի ամբողջական ձևավորում:", img: "s5", cat: "Քաղցրավենիք", hint: "Համեղ ակցենտ" },
-      { id: "gifts", title: "Անհատական նվերներ", desc: "Հուշանվերներ և բոնբոներկաներ՝ անհատական մակագրություններով ձեր հյուրերի համար:", img: "s6", cat: "Նվերներ", hint: "Ցանկացած քանակով" }
+      { id: "tarosik", title: "Տարոսիկներ", desc: "Հարսանեկան և կնունքի տարոսիկներ՝ նուրբ ձեռագործ աշխատանք ձեր տոնի ոճով:", img: "s2", cat: "Տարոսիկներ", hint: "սկսած 500 ֏ / հատ" },
+      { id: "decor", title: "Տոնական դեկորացիա", desc: "Հարսանյաց դեկոր, ֆոտոզոնաներ կնունքների և ծնունդների համար, հարսանեկան կամարներ:", img: "s1", cat: "Դեկորացիա", hint: "սկսած 40 000 ֏" },
+      { id: "boxes", title: "Նվեր-տուփեր", desc: "Նրբաճաշակ նվերների հավաքածուներ քաղցրավենիքով, ծաղիկներով և բացիկներով:", img: "s3", cat: "Նվերներ", hint: "սկսած 8 000 ֏" },
+      { id: "bouquets", title: "Հեղինակային ծաղկեփնջեր", desc: "Հարսանեկան և տոնական ծաղկեփնջեր՝ ընտրված թարմ ծաղիկներով:", img: "s4", cat: "Ծաղիկներ", hint: "սկսած 12 000 ֏" },
+      { id: "sweets", title: "Քաղցրավենիք և Քենդի-բար", desc: "Տոնական թխվածքներ, մակարոնսներ և քաղցր սեղանի ամբողջական ձևավորում:", img: "s5", cat: "Քաղցրավենիք", hint: "սկսած 25 000 ֏" },
+      { id: "gifts", title: "Անհատական նվերներ", desc: "Հուշանվերներ և բոնբոներկաներ՝ անհատական մակագրություններով ձեր հյուրերի համար:", img: "s6", cat: "Նվերներ", hint: "սկսած 600 ֏ / հատ" }
     ],
     bulk: {
       tag: "Հատուկ առաջարկ",
@@ -1783,24 +1783,20 @@ const translations = {
     portfolioHead: { tag: "Պատկերասրահ", title: "Մեր աշխատանքները", sub: "Հարսանեկան տարոսիկներ, նվեր-տուփեր և տոնական դեկորացիաներ մեր պատվիրատուների համար:" },
     cats: ["Բոլորը", "Տարոսիկներ", "Դեկորացիա", "Ծաղիկներ", "Նվերներ", "Քաղցրավենիք"],
     works: [
-      { title: "Հարսանեկան դեկորացիա և կամար", cat: "Դեկորացիա", img: "s1" },
-      { title: "Հարսանեկան ձեռագործ տարոսիկներ", cat: "Տարոսիկներ", img: "s2" },
-      { title: "Նվեր-տուփ թարմ ծաղիկներով", cat: "Նվերներ", img: "s3" },
-      { title: "Հարսի նուրբ ծաղկեփունջ", cat: "Ծաղիկներ", img: "s4" },
-      { title: "Քենդի-բար և տոնական դեսերտներ", cat: "Քաղցրավենիք", img: "s5" },
-      { title: "Ֆոտոզոնա ծննդյան տոնի համար", cat: "Դեկորացիա", img: "p6" },
-      { title: "Կնունքի տարոսիկներ", cat: "Տարոսիկներ", img: "s2" },
-      { title: "Հուշանվերներ հյուրերի համար", cat: "Նվերներ", img: "s6" },
-      { title: "Ծաղկային կոմպոզիցիա", cat: "Ծաղիկներ", img: "s4" },
-      { title: "Նախագահական սեղանի և սրահի դեկոր", cat: "Դեկորացիա", img: "hero" },
-      { title: "Նվերների հավաքածու քաղցրավենիքով", cat: "Նվերներ", img: "s3" },
-      { title: "Քաղցրավենիք տոնական սեղանի համար", cat: "Քաղցրավենիք", img: "s5" }
+      { title: "Հարսանեկան դեկորացիա և կամար", catIndex: 2, img: "s1" },
+      { title: "Հարսանեկան ձեռագործ տարոսիկներ", catIndex: 1, img: "s2" },
+      { title: "Նվեր-տուփ թարմ ծաղիկներով", catIndex: 4, img: "s3" },
+      { title: "Հարսի նուրբ ծաղկեփունջ", catIndex: 3, img: "s4" },
+      { title: "Քենդի-բար և տոնական դեսերտներ", catIndex: 5, img: "s5" },
+      { title: "Ֆոտոզոնա ծննդյան տոնի համար", catIndex: 2, img: "p6" },
+      { title: "Հուշանվերներ հյուրերի համար", catIndex: 4, img: "s6" },
+      { title: "Նախագահական սեղանի և սրահի դեկոր", catIndex: 2, img: "hero" }
     ],
     reviewsHead: { tag: "Կարծիքներ", title: "Հաճախորդների տպավորությունները", sub: "Անկեղծ խոսքեր նրանցից, ովքեր վստահել են մեզ իրենց տոնի ձևավորումը:" },
     reviews: [
-      { q: "«Պատվիրել էինք 140 հարսանեկան տարոսիկ: Ստացանք 10% զեղչ և մեր անուններով գեղեցիկ պիտակներ: Ձեռքի աշխատանքը անթերի էր:»", author: "Անի և Դավիթ", sub: "Հարսանիք Երևանում" },
-      { q: "«Աղջկաս 1 տարեկանի ֆոտոզոնան և քենդի-բարը շատ նուրբ ու գեղեցիկ էին ստացվել: Ժամանակին տեղադրեցին, շնորհակալ ենք շատ:»", author: "Մարիամ", sub: "Դստեր տարեդարձը" },
-      { q: "«Տղայիս կնունքի տարոսիկները հիասքանչ էին: Մինչև առաքելը ուղարկեցին պատրաստի նկարները: Շնորհակալություն բարձր որակի համար:»", author: "Սոնա", sub: "Կնունք Էջմիածնում" }
+      { q: "«Պատվիրել էինք 140 հարսանեկան տարոսիկ: Ստացանք 10% զեղչ և մեր անուններով գեղեցիկ պիտակներ: Ձեռքի աշխատանքը անթերի էր:»", author: "Անի և Դավիթ", sub: "Հարսանիք Երևանում", rating: "★★★★★" },
+      { q: "«Աղջկաս 1 տարեկանի ֆոտոզոնան և քենդի-բարը շատ նուրբ ու գեղեցիկ էին ստացվել: Ժամանակին տեղադրեցին, շնորհակալ ենք շատ:»", author: "Մարիամ", sub: "Դստեր տարեդարձը", rating: "★★★★★" },
+      { q: "«Տղայիս կնունքի տարոսիկները հիասքանչ էին: Մինչև առաքելը ուղարկեցին պատրաստի նկարները: Շնորհակալություն բարձր որակի համար:»", author: "Սոնա", sub: "Կնունք Էջմիածնում", rating: "★★★★★" }
     ],
     faqHead: { tag: "Տեղեկատվություն", title: "Հաճախ տրվող հարցեր", sub: "Ամեն ինչ տարոսիկների և դեկորի ժամկետների, արժեքի և առաքման մասին:" },
     faqs: [
@@ -1810,7 +1806,7 @@ const translations = {
       { q: "Ինչպե՞ս է հաշվարկվում վերջնական արժեքը:", a: "Արժեքը կախված է նյութերից, դետալներից և քանակից: Հստակ գումարը դրամով (AMD) նշվում է մինչ աշխատանքը սկսելը:" },
       { q: "Ինչպե՞ս է կատարվում առաքումը Երևանում և մարզերում:", a: "Պատրաստի պատվերները առաքվում են Երևանում և ուղարկվում ՀՀ մարզեր: Դեկորացիայի դեպքում մեր թիմը նախապես ժամանում է սրահ՝ տեղադրման համար:" }
     ],
-    formHead: { tag: "Հայտ", title: "Հաշվարկել արժեքը", sub: "Թողեք հայտ, և մենք կկապվենք ձեզ հետ WhatsApp-ով՝ մանրամասները քննարկելու համար:" },
+    formHead: { tag: "Հայտ", title: "Հաշվարկել արժեքը", sub: "Թողեք հայտ կամ զանգահարեք մեզ. +374 91 566561" },
     form: {
       name: "Ձեր անունը *", namePl: "Օրինակ՝ Անի",
       contact: "Հեռախոս կամ WhatsApp *", contactPl: "+374 9X XXXXXX",
@@ -1827,11 +1823,12 @@ const translations = {
       qty: "Քանակը (հատ)",
       budget: "Մոտավոր բյուջե", budgetPl: "Օրինակ՝ 60 000 դրամ",
       comment: "Ցանկություններ և երանգներ", commentPl: "Տոնի գույները, անունները պիտակների համար կամ այլ նշումներ...",
-      submit: "Ուղարկել հայտը WhatsApp-ով",
+      submit: "Ուղարկել WhatsApp-ով",
+      callBtn: "📞 Զանգահարել հիմա",
       orderBtn: "Պատվիրել",
       likeBtn: "Պատվիրել նմանատիպ",
       discountActive: (q) => `<strong>10% զեղչն ակտիվացված է</strong><span style="display:block;font-size:0.84rem;margin-top:2px;">Քանակը՝ ${q} հատ: 10% մեծածախ զեղչ և անվանական պիտակներ՝ նվեր:</span>`,
-      success: "Շնորհակալություն: Հիմա կբացվի WhatsApp-ի չաթը ձեր պատվերով:"
+      success: "Շնորհակալություն: Հայտը ուղարկված է:"
     },
     contactsHead: { tag: "Կապ", title: "Կոնտակտներ", sub: "Երևան, Հայաստան • Ամեն օր 09:00 - 21:00" },
     contacts: { wa: "Գրել հաղորդագրություն", phone: "Հեռախոս", fb: "Մեր էջը" },
@@ -1866,12 +1863,12 @@ const translations = {
     },
     servicesHead: { tag: "Collection", title: "Our Services", sub: "Everything for a cohesive celebration: from delicate guest favors to complete hall styling." },
     services: [
-      { id: "tarosik", title: "Event Favors (Tarosik)", desc: "Handcrafted wedding & baptism keepsakes made in harmony with your celebration style.", img: "s2", cat: "Favors", hint: "Handcrafted" },
-      { id: "decor", title: "Event Decor & Styling", desc: "Wedding decor, photozones for christenings and birthdays, arches and banquet hall styling.", img: "s1", cat: "Decor", hint: "Bespoke design" },
-      { id: "boxes", title: "Gift Boxes", desc: "Curated luxury gift hampers with sweets, fresh blooms, and personalized calligraphy.", img: "s3", cat: "Gifts", hint: "For guests & loved ones" },
-      { id: "bouquets", title: "Bespoke Bouquets", desc: "Artisan floral arrangements and bridal bouquets using fresh, hand-selected flowers.", img: "s4", cat: "Bouquets", hint: "Fresh blooms" },
-      { id: "sweets", title: "Candy Bar & Sweets", desc: "Artisan pastries, macarons, and stylish sweet table setups for your guests.", img: "s5", cat: "Sweets", hint: "Sweet accent" },
-      { id: "gifts", title: "Personalized Keepsakes", desc: "Custom guest gifts and bonbonnieres with commemorative tags and names.", img: "s6", cat: "Gifts", hint: "Any quantity" }
+      { id: "tarosik", title: "Event Favors (Tarosik)", desc: "Handcrafted wedding & baptism keepsakes made in harmony with your celebration style.", img: "s2", cat: "Favors", hint: "from 500 ֏ / unit" },
+      { id: "decor", title: "Event Decor & Styling", desc: "Wedding decor, photozones for christenings and birthdays, arches and banquet hall styling.", img: "s1", cat: "Decor", hint: "from 40,000 ֏" },
+      { id: "boxes", title: "Gift Boxes", desc: "Curated luxury gift hampers with sweets, fresh blooms, and personalized calligraphy.", img: "s3", cat: "Gifts", hint: "from 8,000 ֏" },
+      { id: "bouquets", title: "Bespoke Bouquets", desc: "Artisan floral arrangements and bridal bouquets using fresh, hand-selected flowers.", img: "s4", cat: "Bouquets", hint: "from 12,000 ֏" },
+      { id: "sweets", title: "Candy Bar & Sweets", desc: "Artisan pastries, macarons, and stylish sweet table setups for your guests.", img: "s5", cat: "Sweets", hint: "from 25,000 ֏" },
+      { id: "gifts", title: "Personalized Keepsakes", desc: "Custom guest gifts and bonbonnieres with commemorative tags and names.", img: "s6", cat: "Gifts", hint: "from 600 ֏ / unit" }
     ],
     bulk: {
       tag: "Special Offer",
@@ -1889,24 +1886,20 @@ const translations = {
     portfolioHead: { tag: "Gallery", title: "Our Recent Works", sub: "Handmade wedding favors, curated gift hampers, and custom event styling in Armenia." },
     cats: ["All", "Favors", "Decor", "Bouquets", "Gifts", "Sweets"],
     works: [
-      { title: "Wedding arch & venue styling", cat: "Decor", img: "s1" },
-      { title: "Handcrafted wedding favors", cat: "Favors", img: "s2" },
-      { title: "Gift box with fresh flowers", cat: "Gifts", img: "s3" },
-      { title: "Artisan bridal bouquet", cat: "Bouquets", img: "s4" },
-      { title: "Candy bar & holiday treats", cat: "Sweets", img: "s5" },
-      { title: "Birthday photozone styling", cat: "Decor", img: "p6" },
-      { title: "Christening keepsakes", cat: "Favors", img: "s2" },
-      { title: "Handmade guest souvenirs", cat: "Gifts", img: "s6" },
-      { title: "Pastel floral arrangement", cat: "Bouquets", img: "s4" },
-      { title: "Banquet hall styling", cat: "Decor", img: "hero" },
-      { title: "Curated sweet gift hamper", cat: "Gifts", img: "s3" },
-      { title: "Gourmet dessert table", cat: "Sweets", img: "s5" }
+      { title: "Wedding arch & venue styling", catIndex: 2, img: "s1" },
+      { title: "Handcrafted wedding favors", catIndex: 1, img: "s2" },
+      { title: "Gift box with fresh flowers", catIndex: 4, img: "s3" },
+      { title: "Artisan bridal bouquet", catIndex: 3, img: "s4" },
+      { title: "Candy bar & holiday treats", catIndex: 5, img: "s5" },
+      { title: "Birthday photozone styling", catIndex: 2, img: "p6" },
+      { title: "Handmade guest souvenirs", catIndex: 4, img: "s6" },
+      { title: "Banquet hall styling", catIndex: 2, img: "hero" }
     ],
     reviewsHead: { tag: "Testimonials", title: "Client Stories", sub: "Kind words from those who trusted us with their unforgettable moments." },
     reviews: [
-      { q: "“We ordered 140 wedding favors. Received a 10% discount and beautiful personalized tags! The craftsmanship was truly exceptional.”", author: "Ani & David", sub: "Wedding in Yerevan" },
-      { q: "“The photozone and candy bar for my daughter’s 1st birthday were breathtaking. Installed on time without any stress. Highly recommended!”", author: "Mariam", sub: "Daughter's 1st Birthday" },
-      { q: "“Christening favors for our son turned out neat, bright, and elegant. They shared photos before delivery. Thank you for the wonderful work!”", author: "Sona", sub: "Christening in Echmiadzin" }
+      { q: "“We ordered 140 wedding favors. Received a 10% discount and beautiful personalized tags! The craftsmanship was truly exceptional.”", author: "Ani & David", sub: "Wedding in Yerevan", rating: "★★★★★" },
+      { q: "“The photozone and candy bar for my daughter’s 1st birthday were breathtaking. Installed on time without any stress. Highly recommended!”", author: "Mariam", sub: "Daughter's 1st Birthday", rating: "★★★★★" },
+      { q: "“Christening favors for our son turned out neat, bright, and elegant. They shared photos before delivery. Thank you for the wonderful work!”", author: "Sona", sub: "Christening in Echmiadzin", rating: "★★★★★" }
     ],
     faqHead: { tag: "Helpful Info", title: "Frequently Asked Questions", sub: "Everything regarding deadlines, pricing, and delivery in Armenia." },
     faqs: [
@@ -1916,7 +1909,7 @@ const translations = {
       { q: "How is the total price calculated?", a: "Pricing is transparent and based on components, materials, and quantity. We provide a firm quote in Armenian Drams (AMD) before starting." },
       { q: "How does delivery work in Yerevan & Armenia?", a: "Finished favors are packaged securely and delivered via courier across Yerevan or shipped to Armenian regions. For venue decor, our crew installs everything on site." }
     ],
-    formHead: { tag: "Get in Touch", title: "Request a Quote", sub: "Submit the form and we will contact you on WhatsApp to discuss your celebration." },
+    formHead: { tag: "Get in Touch", title: "Request a Quote", sub: "Leave a request or call us directly: +374 91 566561" },
     form: {
       name: "Your Name *", namePl: "e.g. Ani",
       contact: "Phone or WhatsApp *", contactPl: "+374 9X XXXXXX",
@@ -1933,11 +1926,12 @@ const translations = {
       qty: "Quantity (units)",
       budget: "Approximate Budget", budgetPl: "e.g. 60,000 AMD",
       comment: "Palette & Notes", commentPl: "Event colors, names for tags, or special requests...",
-      submit: "Send Request via WhatsApp",
+      submit: "Send via WhatsApp",
+      callBtn: "📞 Call Now",
       orderBtn: "Order",
       likeBtn: "Order similar",
       discountActive: (q) => `<strong>10% Discount Activated</strong><span style="display:block;font-size:0.84rem;margin-top:2px;">Quantity: ${q} pcs. You received our 10% bulk discount + complimentary personalized tags.</span>`,
-      success: "Thank you! WhatsApp is opening with your order summary."
+      success: "Thank you! Request sent."
     },
     contactsHead: { tag: "Get in Touch", title: "Contacts", sub: "Yerevan, Armenia • Daily 09:00 - 21:00" },
     contacts: { wa: "Send message", phone: "Phone", fb: "Our Facebook Page" },
@@ -2049,11 +2043,11 @@ function renderPage() {
   $('#t-port-sub').textContent = t.portfolioHead.sub;
 
   $('#filters').innerHTML = t.cats.map((c, i) => `
-    <button class="${i === 0 ? 'on' : ''}" data-c="${c}">${c}</button>
+    <button class="${i === 0 ? 'on' : ''}" data-idx="${i}">${c}</button>
   `).join('');
 
   $('#gallery').innerHTML = t.works.map(w => `
-    <a class="item" tabindex="0" data-cat="${w.cat}" data-t="${w.title}" data-i="${w.img}">
+    <a class="item" tabindex="0" data-catidx="${w.catIndex}" data-t="${w.title}" data-i="${w.img}">
       ${ph(w.img, w.title)}
       <span class="cap">${w.title}</span>
     </a>
@@ -2127,16 +2121,16 @@ function renderPage() {
 }
 
 // Фильтрация
-function filt(c) {
-  const allCat = translations[currentLang].cats[0];
-  document.querySelectorAll('#filters button').forEach(b => b.classList.toggle('on', b.dataset.c === c));
+function filt(idx) {
+  const targetIdx = parseInt(idx, 10);
+  document.querySelectorAll('#filters button').forEach(b => b.classList.toggle('on', parseInt(b.dataset.idx, 10) === targetIdx));
   document.querySelectorAll('#gallery .item').forEach(i => {
-    i.classList.toggle('hide', c !== allCat && i.dataset.cat !== c);
+    i.classList.toggle('hide', targetIdx !== 0 && parseInt(i.dataset.catidx, 10) !== targetIdx);
   });
 }
 
 $('#filters').onclick = e => {
-  if (e.target.dataset.c) filt(e.target.dataset.c);
+  if (e.target.dataset.idx !== undefined) filt(e.target.dataset.idx);
 };
 
 function selectBulkDiscount() {
