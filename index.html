@@ -1262,6 +1262,19 @@ footer {
     box-shadow: 0 6px 20px rgba(100, 36, 50, 0.35);
   }
 
+  .sticky-btn-phone {
+    background: var(--green);
+    color: #fff;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+    box-shadow: 0 6px 18px rgba(31, 54, 43, 0.35);
+  }
+
   .sticky-btn-wa {
     background: #25d366;
     color: #fff;
@@ -1503,9 +1516,14 @@ footer {
           <textarea name="comment" id="fComment" rows="3" placeholder="Цвета праздника, имена для бирок или особые пожелания..."></textarea>
         </label>
 
-        <button class="btn fill full" type="submit" id="t-f-submit" style="padding: 15px; font-size: 1rem;">
-          Отправить заявку в WhatsApp
-        </button>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <button class="btn fill" type="submit" id="t-f-submit" style="flex: 2; min-width: 220px; padding: 15px; font-size: 0.96rem;">
+            Отправить в WhatsApp
+          </button>
+          <a class="btn outline" href="tel:+37491566561" id="t-f-call" style="flex: 1; min-width: 170px; padding: 15px; font-size: 0.96rem; text-align: center; background: #fff;">
+            📞 Позвонить напрямую
+          </a>
+        </div>
 
         <p id="msg"></p>
       </form>
@@ -1560,7 +1578,10 @@ footer {
   <a class="sticky-btn-main" href="#order" id="t-sticky-btn">
     Заказать
   </a>
-  <a class="sticky-btn-wa" href="https://wa.me/37494216221" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <a class="sticky-btn-phone" href="tel:+37491566561" aria-label="Позвонить" title="Позвонить">
+    📞
+  </a>
+  <a class="sticky-btn-wa" href="https://wa.me/37494216221" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
     💬
   </a>
 </div>
@@ -1636,12 +1657,12 @@ const translations = {
     },
     servicesHead: { tag: "Каталог", title: "Наши услуги", sub: "Всё для гармоничного оформления торжества: от сувениров для гостей до декора залов." },
     services: [
-      { id: "tarosik", title: "Таросики", desc: "Свадебные таросики и таросики на крестины. Изящная ручная сборка в стилистике торжества.", img: "s2", cat: "Таросики", hint: "Ручная работа" },
-      { id: "decor", title: "Декорация праздников", desc: "Свадебное оформление, фотозоны на крестины и дни рождения, арки и декор залов под ключ.", img: "s1", cat: "Декорация", hint: "Индивидуальный дизайн" },
-      { id: "boxes", title: "Подарочные наборы", desc: "Подарочные боксы со сладостями, цветами и персональным оформлением.", img: "s3", cat: "Подарки", hint: "Для близких и гостей" },
-      { id: "bouquets", title: "Авторские букеты", desc: "Цветочные композиции и букеты невесты из свежих отборных цветов.", img: "s4", cat: "Букеты", hint: "Свежие цветы" },
-      { id: "sweets", title: "Сладости и кэнди-бар", desc: "Праздничная выпечка, макаронс и оформление сладкого стола для гостей.", img: "s5", cat: "Сладости", hint: "Сладкий акцент" },
-      { id: "gifts", title: "Индивидуальные подарки", desc: "Сувениры и бонбоньерки с памятными надписями для ваших гостей.", img: "s6", cat: "Подарки", hint: "Любой тираж" }
+      { id: "tarosik", title: "Таросики", desc: "Свадебные таросики и таросики на крестины. Изящная ручная сборка в стилистике торжества.", img: "s2", cat: "Таросики", hint: "от 500 ֏ / шт." },
+      { id: "decor", title: "Декорация праздников", desc: "Свадебное оформление, фотозоны на крестины и дни рождения, арки и декор залов под ключ.", img: "s1", cat: "Декорация", hint: "от 40 000 ֏" },
+      { id: "boxes", title: "Подарочные наборы", desc: "Подарочные боксы со сладостями, цветами и персональным оформлением.", img: "s3", cat: "Подарки", hint: "от 8 000 ֏" },
+      { id: "bouquets", title: "Авторские букеты", desc: "Цветочные композиции и букеты невесты из свежих отборных цветов.", img: "s4", cat: "Букеты", hint: "от 12 000 ֏" },
+      { id: "sweets", title: "Сладости и кэнди-бар", desc: "Праздничная выпечка, макаронс и оформление сладкого стола для гостей.", img: "s5", cat: "Сладости", hint: "от 25 000 ֏" },
+      { id: "gifts", title: "Индивидуальные подарки", desc: "Сувениры и бонбоньерки с памятными надписями для ваших гостей.", img: "s6", cat: "Подарки", hint: "от 600 ֏ / шт." }
     ],
     bulk: {
       tag: "Специальное предложение",
@@ -1665,18 +1686,14 @@ const translations = {
       { title: "Авторский букет невесты", cat: "Букеты", img: "s4" },
       { title: "Кэнди-бар и праздничные десерты", cat: "Сладости", img: "s5" },
       { title: "Фотозона на день рождения", cat: "Декорация", img: "p6" },
-      { title: "Таросики на крестины", cat: "Таросики", img: "s2" },
       { title: "Сувениры для гостей ручной работы", cat: "Подарки", img: "s6" },
-      { title: "Цветочная композиция в пудровых тонах", cat: "Букеты", img: "s4" },
-      { title: "Оформление президиума и зала", cat: "Декорация", img: "hero" },
-      { title: "Подарочный набор со сладостями", cat: "Подарки", img: "s3" },
-      { title: "Десерты для сладкого стола", cat: "Сладости", img: "s5" }
+      { title: "Оформление президиума и зала", cat: "Декорация", img: "hero" }
     ],
     reviewsHead: { tag: "Отзывы", title: "Впечатления клиентов", sub: "Искренние слова тех, кто доверил нам оформление своего праздника." },
     reviews: [
-      { q: "«Заказывали 140 свадебных таросиков. Получили скидку 10% и красивые бирки с нашими именами. Качество ручной работы на высоте!»", author: "Ани и Давид", sub: "Свадьба в Ереване" },
-      { q: "«Декорация фотозоны и кэнди-бара на годик дочки получилась очень нежной. Палитра подобрана идеально, смонтировали вовремя.»", author: "Мариам", sub: "День рождения дочери" },
-      { q: "«Таросики на крестины сына получились аккуратными и светлыми. Прислали фото готовых изделий перед доставкой. Спасибо большое!»", author: "Сона", sub: "Крестины в Эчмиадзине" }
+      { q: "«Заказывали 140 свадебных таросиков. Получили скидку 10% и красивые бирки с нашими именами. Качество ручной работы на высоте!»", author: "Ани и Давид", sub: "Свадьба в Ереване", rating: "★★★★★" },
+      { q: "«Декорация фотозоны и кэнди-бара на годик дочки получилась очень нежной. Палитра подобрана идеально, смонтировали вовремя.»", author: "Мариам", sub: "День рождения дочери", rating: "★★★★★" },
+      { q: "«Таросики на крестины сына получились аккуратными и светлыми. Прислали фото готовых изделий перед доставкой. Спасибо большое!»", author: "Сона", sub: "Крестины в Эчмиадзине", rating: "★★★★★" }
     ],
     faqHead: { tag: "Полезная информация", title: "Частые вопросы", sub: "Всё о сроках, стоимости и доставке таросиков и декора." },
     faqs: [
@@ -1686,7 +1703,7 @@ const translations = {
       { q: "Как рассчитывается итоговая стоимость заказа?", a: "Цена зависит от состава, материалов и объёма работы. Мы озвучиваем точную сумму в драмах (AMD) до начала работы, поэтому доплат не возникает." },
       { q: "Как осуществляется доставка по Еревану и Армении?", a: "Готовые таросики и подарки доставляются курьером по Еревану и отправляются в регионы. Для декорации команда выезжает на площадку заблаговременно для качественного монтажа." }
     ],
-    formHead: { tag: "Заявка", title: "Рассчитать стоимость", sub: "Оставьте заявку, и мы свяжемся с вами в WhatsApp для обсуждения деталей." },
+    formHead: { tag: "Заявка", title: "Рассчитать стоимость", sub: "Оставьте заявку или позвоните нам напрямую: +374 91 566561" },
     form: {
       name: "Ваше имя *", namePl: "Например, Ани",
       contact: "Телефон или WhatsApp *", contactPl: "+374 9X XXXXXX",
@@ -1703,11 +1720,12 @@ const translations = {
       qty: "Количество (шт.)",
       budget: "Примерный бюджет", budgetPl: "Например, 60 000 драм",
       comment: "Пожелания и оттенки", commentPl: "Цвета праздника, имена для бирок или особые пожелания...",
-      submit: "Отправить заявку в WhatsApp",
+      submit: "Отправить в WhatsApp",
+      callBtn: "📞 Позвонить напрямую",
       orderBtn: "Заказать",
       likeBtn: "Заказать похожий",
       discountActive: (q) => `<strong>Скидка 10% активирована</strong><span style="display:block;font-size:0.84rem;margin-top:2px;">Количество: ${q} шт. Вам начислена оптовая скидка 10% и бесплатные именные бирки.</span>`,
-      success: "Спасибо! Сейчас откроется диалог в WhatsApp с вашим заказом."
+      success: "Спасибо! Заявка отправлена."
     },
     contactsHead: { tag: "Связь с нами", title: "Контакты", sub: "Ереван, Армения • Ежедневно с 09:00 до 21:00" },
     contacts: { wa: "Написать сообщение", phone: "Телефон", fb: "Наша страница" },
@@ -2048,6 +2066,7 @@ function renderPage() {
 
   $('#reviewsGrid').innerHTML = t.reviews.map(r => `
     <div class="rev">
+      <div style="color: var(--gold); font-size: 1.1rem; margin-bottom: 8px;">${r.rating || '★★★★★'}</div>
       <q>${r.q}</q>
       <div class="rev-meta">
         <strong>${r.author}</strong>
@@ -2090,6 +2109,7 @@ function renderPage() {
   $('#t-f-comment').textContent = t.form.comment;
   $('#fComment').placeholder = t.form.commentPl;
   $('#t-f-submit').textContent = t.form.submit;
+  if ($('#t-f-call')) $('#t-f-call').textContent = t.form.callBtn || "📞 Позвонить напрямую";
 
   // Contacts & Footer
   $('#t-con-tag').textContent = t.contactsHead.tag;
@@ -2215,21 +2235,21 @@ $('#form').onsubmit = e => {
   const t = translations[currentLang];
 
   const discountText = isDiscount 
-    ? (currentLang === 'am' ? "Այո (10% զեղչ 100 հատից)" : currentLang === 'en' ? "Yes (10% bulk discount)" : "Да (10% от 100 шт)")
+    ? (currentLang === 'am' ? "Այո (10% զեղչ)" : currentLang === 'en' ? "Yes (10% discount)" : "Да (10% скидка)")
     : "—";
 
-  const message = 
-`An Design Service: ${currentLang.toUpperCase()}%0A
-${encodeURIComponent(f.get('name') || '')}%0A
-${encodeURIComponent(f.get('contact') || '')}%0A
-${encodeURIComponent(f.get('type') || '')}%0A
-Qty: ${qty}%0A
-Discount: ${encodeURIComponent(discountText)}%0A
-Date: ${encodeURIComponent(f.get('date') || '—')}%0A
-Budget: ${encodeURIComponent(f.get('budget') || '—')}%0A
-Notes: ${encodeURIComponent(f.get('comment') || '—')}`;
+  const rawMsg = 
+`🌸 *Заявка с сайта An Design Service*
+👤 *Имя:* ${f.get('name') || '—'}
+📞 *Контакты:* ${f.get('contact') || '—'}
+🎁 *Услуга:* ${f.get('type') || '—'}
+📦 *Количество:* ${qty} шт.
+🏷️ *Скидка 10%:* ${discountText}
+📅 *Дата:* ${f.get('date') || '—'}
+💰 *Бюджет:* ${f.get('budget') || '—'}
+💬 *Пожелания:* ${f.get('comment') || '—'}`;
 
-  window.open(`https://wa.me/${WHATSAPP_NUM}?text=${message}`, '_blank');
+  window.open(`https://wa.me/${WHATSAPP_NUM}?text=${encodeURIComponent(rawMsg)}`, '_blank');
 
   const msg = $('#msg');
   msg.className = 'success';
