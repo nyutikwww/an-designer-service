@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Праздничное оформление и подарки ручной работы</title>
+<meta name="description" content="Оформление праздников, таросики, подарочные наборы, букеты и сладости на заказ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--milk:#fbf8f3;--cream:#f4ede2;--beige:#e7dac6;--rose:#d9b4ac;--rose-d:#b98a82;--green:#2f4a3c;--wine:#6e2b3a;--ink:#3a312c;--sh:0 12px 34px rgba(90,60,40,.10)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Jost,sans-serif;font-weight:300;color:var(--ink);background:var(--milk);line-height:1.7;font-size:17px}
+h1,h2,h3{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.15;color:var(--green)}
+h1{font-size:clamp(2.6rem,6.5vw,5rem)}h2{font-size:clamp(2rem,4.2vw,3rem);margin-bottom:14px}h3{font-size:1.55rem}
+a{color:inherit;text-decoration:none}img{display:block;width:100%;height:100%;object-fit:cover}
+section{padding:clamp(64px,9vw,120px) 6vw}.wrap{max-width:1160px;margin:auto}
+.lead{max-width:560px;margin-bottom:40px}
+.btn{display:inline-block;padding:14px 32px;border-radius:40px;border:1px solid var(--green);font-weight:400;font-size:.95rem;cursor:pointer;font-family:inherit;transition:.3s;background:none;color:var(--green)}
+.btn.fill{background:var(--green);color:#fff}.btn:hover{background:var(--wine);border-color:var(--wine);color:#fff;transform:translateY(-2px)}
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--beige),var(--rose));display:flex;align-items:flex-end;padding:14px;color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+.ph img{position:absolute;inset:0}
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 6vw;background:rgba(251,248,243,.88);backdrop-filter:blur(10px)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--green);font-weight:600}
+nav{display:flex;gap:28px;align-items:center}nav a{font-size:.95rem}nav a:hover{color:var(--wine)}
+.burger{display:none;background:none;border:0;font-size:1.8rem;color:var(--green);cursor:pointer}
+/* hero */
+.hero{min-height:100svh;padding:0;display:grid;place-items:center;text-align:center;position:relative;color:#fff;background:linear-gradient(160deg,#c9a39b,#8d6a62 60%,#2f4a3c)}
+.hero>img{position:absolute;inset:0}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(40,25,20,.35),rgba(40,25,20,.5));z-index:1}
+.hero div{position:relative;z-index:2;padding:0 6vw;max-width:880px}
+.hero h1{color:#fff;margin-bottom:20px}.hero p{font-size:1.2rem;margin-bottom:34px}
+.hero .btn{border-color:#fff;color:#fff;margin:6px}.hero .btn.fill{background:#fff;color:var(--green)}
+/* about */
+.about{background:var(--cream)}.two{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about .ph{aspect-ratio:4/5;border-radius:200px 200px 24px 24px;box-shadow:var(--sh)}
+.about p{margin-bottom:16px}
+/* services */
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--sh);transition:.35s}.card:hover{transform:translateY(-6px)}
+.card .ph{height:230px;border-radius:0}.card div.b{padding:24px 26px 30px}.card p{margin:8px 0 18px;font-size:.98rem}
+.card .btn{padding:9px 24px;font-size:.88rem}
+/* portfolio */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.filters button{padding:9px 22px;border-radius:30px;border:1px solid var(--beige);background:#fff;font-family:inherit;font-size:.92rem;cursor:pointer;color:var(--ink);transition:.25s}
+.filters button.on,.filters button:hover{background:var(--rose-d);border-color:var(--rose-d);color:#fff}
+.masonry{columns:3 260px;column-gap:18px}
+.item{break-inside:avoid;margin-bottom:18px;border-radius:18px;overflow:hidden;cursor:zoom-in;position:relative;display:block}
+.item .ph{width:100%}.item .cap{position:absolute;inset:auto 0 0;padding:34px 16px 14px;background:linear-gradient(transparent,rgba(40,25,20,.7));color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.15rem;opacity:0;transition:.3s;z-index:2}
+.item:hover .cap,.item:focus .cap{opacity:1}.item.hide{display:none}
+.lb{position:fixed;inset:0;background:rgba(30,20,16,.92);z-index:100;display:none;place-items:center;padding:20px}
+.lb.open{display:grid}.lb .box{max-width:min(92vw,900px);max-height:86vh;width:100%;text-align:center;color:#fff}
+.lb .box img{height:auto;max-height:78vh;object-fit:contain;border-radius:12px}.lb .box .ph{height:60vh;border-radius:12px;justify-content:center;align-items:center}
+.lb p{font-family:'Cormorant Garamond',serif;font-size:1.4rem;margin-top:10px}.lb button{position:absolute;top:16px;right:22px;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer}
+/* custom */
+.custom{background:var(--green);color:#f4ede2;text-align:center}.custom h2{color:#fff}.custom p{max-width:560px;margin:0 auto 32px}
+.custom .btn{border-color:#f4ede2;color:#f4ede2}.custom .btn:hover{background:#f4ede2;color:var(--green);border-color:#f4ede2}
+/* reviews */
+.reviews{background:var(--cream)}.rev{background:#fff;border-radius:22px;padding:30px;box-shadow:var(--sh)}
+.rev q{display:block;font-family:'Cormorant Garamond',serif;font-size:1.3rem;line-height:1.4;color:var(--green);quotes:none;margin-bottom:16px}.rev span{font-size:.9rem;color:var(--rose-d)}
+/* faq */
+details{border-bottom:1px solid var(--beige);padding:20px 0;max-width:800px}summary{cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--green);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--rose-d);font-size:1.6rem;line-height:1}details[open] summary::after{content:"–"}details p{margin-top:12px}
+/* order */
+.order{background:var(--cream)}form{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:#fff;padding:clamp(24px,4vw,44px);border-radius:26px;box-shadow:var(--sh);max-width:820px}
+label{display:flex;flex-direction:column;gap:6px;font-size:.9rem}.full{grid-column:1/-1}
+input,select,textarea{font:inherit;padding:12px 14px;border:1px solid var(--beige);border-radius:12px;background:var(--milk);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--rose);border-color:var(--rose)}
+#msg{grid-column:1/-1;color:var(--green);font-size:.95rem}
+/* contacts */
+.contacts{text-align:center}.cbtns{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;max-width:860px;margin:30px auto}
+.cbtns a{padding:22px;border-radius:20px;background:#fff;box-shadow:var(--sh);font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--green);transition:.3s}
+.cbtns a small{display:block;font-family:Jost;font-size:.85rem;color:var(--ink)}.cbtns a:hover{background:var(--wine);color:#fff}.cbtns a:hover small{color:#fff}
+footer{text-align:center;padding:28px;font-size:.85rem;background:var(--cream)}
+.sticky{display:none}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s}.rv.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--wine);outline-offset:3px}
+@media(max-width:820px){
+.two{grid-template-columns:1fr;gap:34px}form{grid-template-columns:1fr}.burger{display:block}
+nav{position:fixed;inset:58px 0 auto;flex-direction:column;background:var(--milk);padding:26px;gap:20px;transform:translateY(-130%);transition:.35s;box-shadow:var(--sh)}nav.open{transform:none}
+.sticky{display:block;position:fixed;z-index:60;left:5vw;right:5vw;bottom:14px;text-align:center;padding:15px;border-radius:40px;background:var(--wine);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+footer{padding-bottom:84px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header>
+<a href="#top" class="logo">Ваш бренд</a>
+<button class="burger" aria-label="Меню" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav onclick="this.classList.remove('open')">
+<a href="#about">О нас</a><a href="#services">Услуги</a><a href="#portfolio">Работы</a><a href="#faq">Вопросы</a><a href="#contacts">Контакты</a>
+<a href="#order" class="btn fill" style="padding:9px 24px">Заказать</a>
+</nav>
+</header>
+
+<main id="top">
+<section class="hero">
+<img src="images/hero.jpg" alt="Праздничное оформление" onerror="this.remove()">
+<div>
+<h1>Создаём моменты, которые хочется запомнить</h1>
+<p>Праздничное оформление, подарки и композиции ручной работы — индивидуально для каждого события.</p>
+<a class="btn fill" href="#portfolio">Посмотреть работы</a><a class="btn" href="#order">Заказать</a>
+</div>
+</section>
+
+<section class="about" id="about"><div class="wrap two">
+<div class="ph rv"><img src="images/about.jpg" alt="Автор за работой" onerror="this.remove()"></div>
+<div class="rv">
+<h2>О нас</h2>
+<p>Мы создаём красивые детали для особенных моментов — от оформления пространства до небольших подарков для ваших гостей.</p>
+<p>Каждый заказ мы делаем вручную: подбираем палитру, цветы, ткани и вкусы под ваш праздник, чтобы всё выглядело цельно и по-настоящему вашим. Свадьбы, дни рождения, помолвки, крестины — для нас нет мелочей.</p>
+<p>Главная идея проста: сделать праздник красивым, индивидуальным и запоминающимся.</p>
+</div></div></section>
+
+<section id="services"><div class="wrap">
+<h2 class="rv">Услуги</h2><p class="lead rv">Всё для праздника в одном месте — можно заказать что-то одно или доверить нам оформление целиком.</p>
+<div class="grid3" id="svc"></div>
+</div></section>
+
+<section id="portfolio" style="background:var(--milk)"><div class="wrap">
+<h2 class="rv">Портфолио</h2><p class="lead rv">Наши работы для свадеб, дней рождения, помолвок и крестин.</p>
+<div class="filters" id="filters"></div>
+<div class="masonry" id="gallery"></div>
+</div></section>
+
+<section class="custom"><div class="wrap rv">
+<h2>Есть идея? Давайте создадим её вместе.</h2>
+<p>Расскажите нам о вашем мероприятии или подарке, а мы поможем воплотить вашу идею в красивую и индивидуальную композицию.</p>
+<a class="btn" href="#order">Обсудить заказ</a>
+</div></section>
+
+<section class="reviews"><div class="wrap">
+<h2 class="rv">Отзывы</h2>
+<div class="grid3 rv">
+<div class="rev"><q>Оформление свадьбы превзошло ожидания. Гости до сих пор спрашивают, кто делал такую красоту.</q><span>Марина, свадьба</span></div>
+<div class="rev"><q>Таросики получились нежными и аккуратными, каждый — как маленький подарок. Спасибо за внимание к деталям!</q><span>Анна, день рождения дочери</span></div>
+<div class="rev"><q>Заказывала подарочный набор для мамы: букет, сладости и открытка. Всё упаковано с любовью, мама была в восторге.</q><span>Лилит, подарок</span></div>
+<div class="rev"><q>Крестины прошли спокойно и красиво. Выпечка была вкусной, а декор точно такой, как мы представляли.</q><span>Нарине, крестины</span></div>
+</div></div></section>
+
+<section id="faq"><div class="wrap">
+<h2 class="rv">Частые вопросы</h2>
+<details><summary>За сколько времени нужно оформить заказ?</summary><p>Небольшие подарки и таросики лучше заказывать за 1–2 недели. Для оформления мероприятия и свадеб — за 3–4 недели, чтобы спокойно всё продумать. Срочные заказы обсуждаем отдельно.</p></details>
+<details><summary>Можно ли сделать индивидуальный дизайн?</summary><p>Да, большая часть работ делается индивидуально. Мы учтём цвета, тематику и ваши пожелания, можно прислать референсы.</p></details>
+<details><summary>Можно ли заказать оформление мероприятия полностью?</summary><p>Конечно. Мы берём на себя концепцию, декор площадки, цветы, подарки для гостей и сладкий стол, а в день события всё устанавливаем.</p></details>
+<details><summary>Доставляете ли вы заказы?</summary><p>Да, доставляем по городу и можем выезжать на площадку для монтажа декора. Стоимость доставки зависит от адреса.</p></details>
+<details><summary>Можно ли заказать небольшую партию таросиков?</summary><p>Да, возможен заказ от небольшого количества. Напишите нам, и мы подскажем варианты оформления.</p></details>
+<details><summary>Как рассчитывается стоимость?</summary><p>Цена зависит от состава, объёма работы, материалов и сроков. Расскажите о своей идее и бюджете, мы предложим подходящее решение и назовём точную сумму до начала работы.</p></details>
+</div></section>
+
+<section class="order" id="order"><div class="wrap">
+<h2 class="rv">Заявка на заказ</h2><p class="lead rv">Заполните форму, и мы свяжемся с вами, чтобы обсудить детали.</p>
+<form id="form" class="rv">
+<label>Имя<input name="name" required></label>
+<label>Телефон или мессенджер<input name="contact" required></label>
+<label>Тип заказа<select name="type"><option>Оформление мероприятия</option><option>Таросики</option><option>Подарочный набор</option><option>Букет</option><option>Сладости и выпечка</option><option>Подарок на заказ</option></select></label>
+<label>Дата мероприятия<input type="date" name="date"></label>
+<label class="full">Примерный бюджет<input name="budget" placeholder="например, 50 000 драм"></label>
+<label class="full">Комментарий<textarea name="comment" rows="4" placeholder="Расскажите о празднике, цветах, пожеланиях"></textarea></label>
+<label class="full">Фото или референс<input type="file" name="ref" accept="image/*"></label>
+<button class="btn fill full" type="submit">Отправить заявку</button>
+<p id="msg"></p>
+</form></div></section>
+
+<section class="contacts" id="contacts"><div class="wrap">
+<h2 class="rv">Контакты</h2><p class="rv">Ереван, Армения</p>
+<div class="cbtns rv">
+<a href="https://instagram.com/YOUR_INSTAGRAM" target="_blank" rel="noopener">Instagram<small>@YOUR_INSTAGRAM</small></a>
+<a href="https://wa.me/374XXXXXXXX" target="_blank" rel="noopener">WhatsApp<small>Написать сообщение</small></a>
+<a href="https://facebook.com/YOUR_FACEBOOK" target="_blank" rel="noopener">Facebook<small>Наша страница</small></a>
+<a href="tel:+374XXXXXXXX">Телефон<small>+374 XX XXX XXX</small></a>
+</div></div></section>
+</main>
+<footer>© <span id="y"></span> Ваш бренд. Сделано вручную, с любовью.</footer>
+<a class="sticky" href="#order">Заказать</a>
+<div class="lb" id="lb" onclick="this.classList.remove('open')"><button aria-label="Закрыть">×</button><div class="box" id="lbbox"></div></div>
+
+<script>
+// ===== НАСТРОЙКИ: замените на свои данные =====
+const WHATSAPP = "374XXXXXXXX"; // номер без + и пробелов
+// ==============================================
+const services=[
+["Оформление мероприятий","Декор площадок, арки, фотозоны и сладкие столы под ключ.","s1","Оформление"],
+["Таросики","Милые сувениры для гостей: аккуратно, в едином стиле праздника.","s2","Таросики"],
+["Подарочные наборы","Продуманные наборы со сладостями, цветами и открытками.","s3","Подарочные наборы"],
+["Букеты","Авторские букеты и цветочные композиции в нежных оттенках.","s4","Букеты"],
+["Сладости и выпечка","Авторская выпечка и сладкие подарки для вашего стола.","s5","Сладости"],
+["Подарки на заказ","Индивидуальные подарки и красивая упаковка для близких.","s6","Подарочные наборы"]];
+const works=[
+["Арка для свадьбы","Оформление","p1",320],["Нежный букет","Букеты","p2",400],["Таросики для гостей","Таросики","p3",260],
+["Набор «Для мамы»","Подарочные наборы","p4",360],["Сладкий стол","Сладости","p5",300],["Фотозона на день рождения","Оформление","p6",420],
+["Букет в крафте","Букеты","p7",280],["Капкейки и макаронс","Сладости","p8",340],["Таросики на крестины","Таросики","p9",300],
+["Подарочный бокс","Подарочные наборы","p10",260],["Помолвка в розовых тонах","Оформление","p11",380],["Композиция из сухоцветов","Букеты","p12",300]];
+const $=s=>document.querySelector(s);
+const ph=(n,t,h)=>`<div class="ph" ${h?`style="height:${h}px"`:''}><img src="images/${n}.jpg" alt="${t}" loading="lazy" onerror="this.remove()">${h?'':''}</div>`;
+$('#svc').innerHTML=services.map(s=>`<article class="card rv">${ph(s[2],s[0])}<div class="b"><h3>${s[0]}</h3><p>${s[1]}</p><a class="btn" href="#portfolio" data-f="${s[3]}">Подробнее</a></div></article>`).join('');
+const cats=["Все","Оформление","Таросики","Букеты","Подарочные наборы","Сладости"];
+$('#filters').innerHTML=cats.map((c,i)=>`<button class="${i?'':'on'}" data-c="${c}">${c}</button>`).join('');
+$('#gallery').innerHTML=works.map(w=>`<a class="item rv" tabindex="0" data-cat="${w[1]}" data-t="${w[0]}" data-i="${w[2]}">${ph(w[2],w[0],w[3])}<span class="cap">${w[0]}</span></a>`).join('');
+function filt(c){document.querySelectorAll('#filters button').forEach(b=>b.classList.toggle('on',b.dataset.c===c));
+document.querySelectorAll('.item').forEach(i=>i.classList.toggle('hide',c!=='Все'&&i.dataset.cat!==c))}
+$('#filters').onclick=e=>e.target.dataset.c&&filt(e.target.dataset.c);
+document.querySelectorAll('[data-f]').forEach(a=>a.onclick=()=>filt(a.dataset.f));
+function openLb(i){const im=new Image();im.alt=i.dataset.t;im.src=`images/${i.dataset.i}.jpg`;
+im.onerror=()=>{$('#lbbox').innerHTML=`<div class="ph"><span>${i.dataset.t}</span></div><p>${i.dataset.t}</p>`};
+$('#lbbox').innerHTML='';$('#lbbox').append(im);$('#lbbox').insertAdjacentHTML('beforeend',`<p>${i.dataset.t}</p>`);$('#lb').classList.add('open')}
+$('#gallery').onclick=e=>{const i=e.target.closest('.item');i&&openLb(i)};
+$('#gallery').onkeydown=e=>{if(e.key==='Enter'){const i=e.target.closest('.item');i&&openLb(i)}};
+document.onkeydown=e=>e.key==='Escape'&&$('#lb').classList.remove('open');
+// появление
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// форма -> WhatsApp
+$('#form').onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);
+const t=`Здравствуйте! Хочу сделать заказ.%0AИмя: ${f.get('name')}%0AКонтакт: ${f.get('contact')}%0AТип: ${f.get('type')}%0AДата: ${f.get('date')||'—'}%0AБюджет: ${f.get('budget')||'—'}%0AКомментарий: ${f.get('comment')||'—'}`;
+window.open(`https://wa.me/${WHATSAPP}?text=${t}`,'_blank');
+$('#msg').textContent='Спасибо! Откроется WhatsApp с вашей заявкой. Фото-референс можно приложить прямо в чате.'};
+$('#y').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
