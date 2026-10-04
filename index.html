@@ -522,74 +522,54 @@ nav a:hover {
   font-size: 0.85rem;
 }
 
-/* Bulk Discount Box */
+/* Bulk Discount Box (Compact & Understated) */
 .bulk-promo-section {
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding: 20px 5vw 34px;
 }
 
 .bulk-box {
-  background: linear-gradient(135deg, #20352a, #15241c 70%, #4a1d26);
-  color: #fff;
-  border-radius: 24px;
-  padding: clamp(32px, 5vw, 56px);
-  display: grid;
-  grid-template-columns: 1.3fr 0.8fr;
-  gap: 36px;
-  align-items: center;
-  box-shadow: var(--sh-lg);
-}
-
-.bulk-box h2 {
-  color: #fff;
-  margin-bottom: 12px;
-}
-
-.bulk-box p {
-  color: #e5ded6;
-  font-size: 1.02rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.bulk-box ul {
-  list-style: none;
+  background: #fff;
+  border: 1px solid var(--beige);
+  border-radius: 16px;
+  padding: 22px 28px;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 24px;
-  font-size: 0.92rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: var(--sh-sm);
 }
 
-.bulk-box ul li::before {
-  content: "—";
-  color: var(--gold);
-  margin-right: 8px;
-  font-weight: 600;
-}
-
-.bulk-side {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 18px;
-  padding: 28px;
-  text-align: center;
-}
-
-.bulk-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4.4rem;
-  color: #ffdeb0;
-  line-height: 1;
-  font-weight: 700;
+.bulk-info h3 {
+  font-size: 1.25rem;
+  color: var(--green);
   margin-bottom: 4px;
 }
 
-.bulk-side p {
+.bulk-info p {
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.bulk-badge-mini {
+  font-size: 0.74rem;
+  color: var(--gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.bulk-actions {
+  flex-shrink: 0;
+}
+
+.bulk-actions .btn {
+  padding: 10px 22px;
   font-size: 0.88rem;
-  color: #d8cec3;
-  margin-bottom: 20px;
+  white-space: nowrap;
 }
 
 /* ===================================================
@@ -1242,12 +1222,22 @@ footer {
     padding: 20px 16px;
   }
 
+  .bulk-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 16px;
+    gap: 14px;
+  }
+  .bulk-actions {
+    width: 100%;
+  }
+  .bulk-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .float-wa {
-    bottom: 76px;
-    right: 18px;
-    width: 48px;
-    height: 48px;
-    font-size: 1.5rem;
+    display: none !important;
   }
 
   .sticky-bar {
@@ -1392,22 +1382,17 @@ footer {
     </div>
   </section>
 
-  <!-- Bulk Discount Section (The single tasteful place for the discount offer) -->
+  <!-- Bulk Discount Section (Understated & Compact) -->
   <section class="bulk-promo-section" id="bulk-discount">
     <div class="wrap">
       <div class="bulk-box rv in">
-        <div>
-          <span class="sec-tag" style="color: #ffdeb0;" id="t-bulk-tag">Специальное предложение</span>
-          <h2 id="t-bulk-title">Скидка 10% при заказе от 100 штук</h2>
-          <p id="t-bulk-desc">Для свадеб, помолвок и больших торжеств дарим скидку на весь тираж таросиков или подарков, а также бесплатно разрабатываем персональные именные бирки.</p>
-          <ul id="bulkList"></ul>
-          <a href="#order" class="btn wine-fill" onclick="selectBulkDiscount()" id="t-bulk-btn">Получить скидку</a>
+        <div class="bulk-info">
+          <span class="bulk-badge-mini" id="t-bulk-tag">Специальное предложение</span>
+          <h3 id="t-bulk-title">Скидка 10% при заказе от 100 штук</h3>
+          <p id="t-bulk-desc">Для свадеб и торжеств: скидка 10% на тираж таросиков или подарков + персональные бирки в подарок.</p>
         </div>
-
-        <div class="bulk-side">
-          <div class="bulk-num">-10%</div>
-          <p id="t-bulk-side-p">при заказе от 100 единиц таросиков или сувениров</p>
-          <a id="t-bulk-wa-btn" href="https://wa.me/37494216221" target="_blank" rel="noopener" class="btn fill" style="width: 100%; padding: 11px; font-size: 0.88rem;">Написать в WhatsApp</a>
+        <div class="bulk-actions">
+          <a href="#order" class="btn wine-fill" onclick="selectBulkDiscount()" id="t-bulk-btn">Получить скидку</a>
         </div>
       </div>
     </div>
@@ -1660,16 +1645,9 @@ const translations = {
     ],
     bulk: {
       tag: "Специальное предложение",
-      title: "Скидка 10% при заказе от 100 штук",
-      desc: "Для свадеб, помолвок и больших торжеств дарим скидку на весь тираж таросиков или подарков, а также бесплатно разрабатываем персональные именные бирки.",
-      perks: [
-        "Скидка 10% рассчитывается сразу при заказе от 100 шт",
-        "Именные карточки и бирки с датой праздника в подарок",
-        "Бережная упаковка в транспортировочные коробки"
-      ],
-      btn: "Получить скидку",
-      sideP: "при заказе от 100 единиц таросиков или сувениров",
-      waBtn: "Написать в WhatsApp"
+      title: "Скидка 10% при заказе от 100 шт.",
+      desc: "Для свадеб и торжеств: скидка 10% на тираж таросиков или подарков + персональные бирки в подарок.",
+      btn: "Получить скидку"
     },
     schemeHead: { tag: "Прозрачный процесс", title: "Схема оформления заказа", sub: "От первой идеи до готового праздника — 4 простых и комфортных шага." },
     scheme: [
@@ -1774,15 +1752,8 @@ const translations = {
     bulk: {
       tag: "Հատուկ առաջարկ",
       title: "10% զեղչ 100 հատից ավել պատվերի դեպքում",
-      desc: "Հարսանիքների և մեծ միջոցառումների համար նվիրում ենք 10% զեղչ տարոսիկների ողջ քանակի վրա, ինչպես նաև անվճար պատրաստում ենք անհատական անվանական պիտակներ:",
-      perks: [
-        "10% զեղչը հաշվարկվում է 100 հատից սկսած",
-        "Անվանական դիզայներական պիտակներ՝ նվեր",
-        "Հուսալի փաթեթավորում անվտանգ տեղափոխման համար"
-      ],
-      btn: "Ստանալ զեղչը",
-      sideP: "100 և ավել տարոսիկների կամ նվերների պատվերի դեպքում",
-      waBtn: "Գրել WhatsApp-ով"
+      desc: "Հարսանիքների և մեծ միջոցառումների համար՝ 10% զեղչ տարոսիկների վրա + անվանական պիտակներ՝ նվեր:",
+      btn: "Ստանալ զեղչը"
     },
     schemeHead: { tag: "Պարզ գործընթաց", title: "Ինչպես կատարել պատվեր", sub: "Առաջին գաղափարից մինչև պատրաստի տոն՝ 4 հարմար և հստակ քայլ:" },
     scheme: [
@@ -1887,15 +1858,8 @@ const translations = {
     bulk: {
       tag: "Special Offer",
       title: "10% Discount on orders of 100+ items",
-      desc: "Planning a large wedding or milestone event? Enjoy a 10% discount on your entire order of favors, plus complimentary custom name tags.",
-      perks: [
-        "10% discount applied automatically on 100+ units",
-        "Complimentary personalized tags with names & date",
-        "Secure protective packaging for safe transport"
-      ],
-      btn: "Claim 10% Discount",
-      sideP: "valid on orders of 100 or more favors or gifts",
-      waBtn: "Chat on WhatsApp"
+      desc: "Planning a large wedding or celebration? Enjoy 10% off favors or gifts + complimentary custom name tags.",
+      btn: "Claim 10% Discount"
     },
     schemeHead: { tag: "Simple Process", title: "How to Place an Order", sub: "From initial inspiration to flawless delivery — 4 easy steps." },
     scheme: [
@@ -2041,10 +2005,7 @@ function renderPage() {
   $('#t-bulk-tag').textContent = t.bulk.tag;
   $('#t-bulk-title').textContent = t.bulk.title;
   $('#t-bulk-desc').textContent = t.bulk.desc;
-  $('#bulkList').innerHTML = t.bulk.perks.map(p => `<li>${p}</li>`).join('');
   $('#t-bulk-btn').textContent = t.bulk.btn;
-  $('#t-bulk-side-p').textContent = t.bulk.sideP;
-  $('#t-bulk-wa-btn').textContent = t.bulk.waBtn;
 
   // Scheme with Vector Icons
   $('#t-scheme-tag').textContent = t.schemeHead.tag;
